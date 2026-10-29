@@ -1,0 +1,10 @@
+__pycache__
+*.pyc
+.venv
+mlruns
+artifacts/*
+!artifacts/.gitkeep
+data/*
+!data/raw/.gitkeep
+.git
+.github

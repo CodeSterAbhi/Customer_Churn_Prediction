@@ -1,0 +1,39 @@
+
+# Environment variables and secrets
+.env
+.env.*
+!.env.example
+
+# Python generated files
+__pycache__/
+*.py[cod]
+*.egg-info/
+.pytest_cache/
+.ipynb_checkpoints/
+
+# Virtual environments
+.venv/
+venv/
+env/
+
+# MLflow local tracking
+mlruns/
+mlflow.db
+mlflow.db-*
+
+# Local application data
+.gradio/
+.vscode/
+*.log
+
+# Datasets: do not publish raw or processed CSVs by default
+data/raw/*.csv
+data/processed/*.csv
+
+# Trained model artifacts: publish separately if intentionally approved
+artifacts/*.joblib
+artifacts/*.json
+
+# OS files
+.DS_Store
+Thumbs.db

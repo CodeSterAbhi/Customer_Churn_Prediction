@@ -1,0 +1,28 @@
+project_name: "customer-churn-mlops"
+random_state: 42
+
+data:
+  raw_path: "data/raw/Telco-Customer-Churn.csv"
+  processed_dir: "data/processed"
+  target_col: "Churn"
+  id_col: "customerID"
+  test_size: 0.2
+  val_size: 0.2
+
+training:
+  models: ["logistic_regression", "random_forest", "xgboost"]
+  selection_metric: "roc_auc"
+
+optuna:
+  n_trials: 20
+  timeout: 300
+  cv_folds: 5
+
+mlflow:
+  experiment_name: "customer_churn_experiment"
+  tracking_uri: "sqlite:///mlflow.db"
+
+artifacts:
+  model_dir: "artifacts"
+  model_filename: "best_churn_pipeline.joblib"
+  metadata_filename: "model_metadata.json"

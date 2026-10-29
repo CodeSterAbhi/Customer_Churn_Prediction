@@ -1,0 +1,21 @@
+[build-system]
+requires = ["setuptools>=42.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "churn_pipeline"
+version = "1.0.0"
+description = "Customer Churn MLOps Pipeline"
+readme = "README.md"
+requires-python = ">=3.8"
+dependencies = [
+    "pandas",
+    "numpy",
+    "scikit-learn",
+    "xgboost",
+    "optuna",
+    "mlflow",
+    "pyyaml",
+    "gradio",
+    "joblib"
+]
